@@ -23,10 +23,10 @@ body{
     translate: -50% -50%;
     border-radius: 50%;
     background: linear-gradient(
-        to right,aquamarine,mediumpurple
+        to right,rgba(127, 255, 212, 0.219),rgba(147, 112, 216, 0.404)
     );
     animation: rotate 20s infinite;
-    filter: blur(200px);
+    filter: blur(500px);
 }
 
 
@@ -35,5 +35,5 @@ body{
     width: 100%;
     position: absolute;
     z-index: 2;
-    backdrop-filter: blur(200px);
+    backdrop-filter: blur(500px);
 }

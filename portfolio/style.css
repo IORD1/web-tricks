@@ -1,0 +1,292 @@
+
+body{
+  background-color: #45567D;
+  height: 100%;
+  width: 100%;
+
+}
+#navbar{
+  font-family: 'Poppins', sans-serif;
+  color: #f0f0f0;
+  background-color: #BE3644;
+  width: 100%;
+  height: auto;
+  position: sticky;
+  top: 0;
+  display: flex;
+  overflow: hidden;
+  position: fixed;
+  /* background-color: goldenrod; */
+  top:0;
+  left:0;
+  /* text-align: right ; */
+}
+.navelemts{
+  color:#ffffff;
+  font-size: 23px;
+  /* margin: auto 20px auto 200px; */
+  /* align-self:; */
+  display: flex;
+  text-decoration: none;
+  
+}
+.navelemts:hover{
+  background-color:cornflowerblue;
+  font-size: 25px;
+  border-radius: 5px;
+}
+
+#aboutnav{
+  margin: auto 25px auto 1000px;
+}
+#worknav{
+  margin: auto 25px auto 25px;
+}
+#contactnav{
+  margin: auto auto auto 25px;
+
+}
+#welcome-section{
+  width: 100%;
+  /* background-color: #1F1E21; */
+  background-image: linear-gradient(45deg, #393C3F , #19181A);
+  /* height: auto; */
+  height:100vh;
+  /* margin-top: 65px; */
+  padding-top: 15%;
+  /* padding-bottom: 15%; */
+  /* margin-bottom: 0px; */
+  padding-top: 0px;
+margin-top: 0px;
+display: block;
+height: 100vh;
+
+}
+#title{
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  color: #f0f0f0;
+  font-size: 60px;
+  /* margin-top: 0%; */
+  /* align-self: center; */
+
+  /* margin: 35% auto auto auto; */
+
+  /* height:100vh; */
+}
+#titlesub{
+  text-align: center;
+  /* color: #f0f0f0; */
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  color: #B93443;
+}
+#projects{
+  background-color: #45567D;
+  height: auto;
+  width: 100%;
+  /* display: grid; */
+}
+
+#projectshead{
+  color: white;
+  text-align: center;
+  font-family:  'Raleway', sans-serif ;
+  font-size: 45px;
+  /* margin-top:  */
+} 
+.project-tile{
+  width: 425px;
+  height: auto;
+  background-color: #303841;
+  margin: 50px 15px auto 15px;
+  border-radius: 4px;
+}
+#projectcontainer1{
+  width: 100%;
+  height: auto;
+  /* display: grid; */
+  /* grid-gap: 10px; */
+  /* grid-template-columns: 1fr, 1fr, 1fr; */
+  /* grid-template-rows: 1fr, 1fr, 1fr ; */
+  display: flex;
+  
+
+  /* grid-template-rows: auto; */
+}
+#tributepage{
+  background-image: url(https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#randomquotemachine{
+  background-image: url(https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#javascriptcalculator{
+  background-image: url(https://cdn.freecodecamp.org/testable-projects-fcc/images/calc.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.project-tile p{
+  background-color: #303841;
+  margin: 400px auto auto auto ;
+  text-align: center;
+  /* padding: 20px auto 20px auto; */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
+  font-family: 'Poppins', sans-serif ;
+  font-size: 20px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+
+
+}
+#projectcontainer2{
+  width: 100%;
+  height: auto;
+  /* display: grid; */
+  /* grid-gap: 10px; */
+  /* grid-template-columns: 1fr, 1fr, 1fr; */
+  /* grid-template-rows: 1fr, 1fr, 1fr ; */
+  display: flex;
+  
+
+  /* grid-template-rows: auto; */
+}
+#mapdataacrosstheglobe{
+  background-image: url(https://cdn.freecodecamp.org/testable-projects-fcc/images/map.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#wikiviwer{
+  background-image: url(https://cdn.freecodecamp.org/testable-projects-fcc/images/wiki.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#tttgame{
+  background-image: url(https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+#showallbutton{
+  /* align-self: center; */
+  margin: 100px 48% 100px 48%;
+  background-color: #303841;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  font-family: 'Poppins', sans-serif ;
+  width: 10%;
+  height: 40px;
+  padding-top: 10px;
+  border-radius: 3px;
+
+}
+#showallbutton:hover{
+  background-color: #BE3644;
+}
+#footer{
+  background-color: #303841;
+  padding-top: 5%;
+}
+#footertitle{
+  color: white;
+  font-size: 60px;
+  text-align: center;
+  font-family: 'Raleway', sans-ser;
+  margin-bottom: 0px;
+}
+#footertitlesub{
+  color: white;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  padding-bottom: 30px;
+}
+#footercontact{
+  color: white;
+  display: flex;
+  text-align: center;
+  font-size: 24px ;
+  font-family:  'Poppins', sans-serif;
+  /* list-style: none; */
+  -webkit-padding-start: 0px;
+  text-shadow: 2px 2px 8px black;
+  margin-bottom: 50px;
+}
+
+#facebook{
+  margin: auto 25px auto 19%;
+  display: flex;
+  /* background-color: thistle; */
+}
+#github{
+  margin: auto 25px auto 25px;
+  display: flex;
+  /* background-color: red; */
+}
+#twitter{
+  margin: auto 25px auto 25px;
+  display: flex;
+  /* background-color: rebeccapurple; */
+}
+#sendamail{
+  margin: auto 25px auto 25px;
+  display: flex;
+  /* background-color: gold; */
+}
+#callme{
+  margin: auto auto auto 25px; 
+  display: flex;
+  /* background-color: greenyellow; */
+}
+.material-icons{
+/* display: inline-block; */
+/* vertical-align: middle; */
+margin-top: 30px;
+}
+hr{
+  color: #BE3644 ;
+  background-color: #BE3644 ;
+  height: 5px;
+  border: 0;
+}
+
+#lastr{
+  display: flex;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 18px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+
+}
+#lastr p{
+  margin-left: 100px;
+}
+.i:hover{
+  margin-top: 50px;
+}
+@media only screen and (max-width: 600px) {
+  #projectcontainer1{
+      display:unset;
+  }
+  #projectcontainer2{
+      display: unset;
+  }
+} 

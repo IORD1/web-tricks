@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <head>  
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/index1.css">
+        <link rel="stylesheet" href="css/index.css">
+        <title>Homepage</title>
+       
+    </head>
+    <body>
+        <div class="splash">
+            <div class="circle">
+              Loading Weather...
+              <!-- <h1 class="fade-in">Fetching Quotes...</h1> -->
+            </div>
+            
+          </div>
+        <div id="head-bar">
+            <div id="battery-container" class="head-bar-section">
+                <svg width="90%" height="90%" viewBox="-100 -100 200 200">
+                    <circle class="minute_marker" r="90" pathLength="60" />
+                    <circle class="hour_marker" r="90" pathLength="60" />
+                    <text id="text" class="text" x="45" y="5"></text>
+                  
+                    <g id="hour_hand">
+                      <line class="hand" x1="0" y1="0" x2="0" y2="-50" />
+                      <line class="hand hand--thick" x1="0" y1="-12" x2="0" y2="-50" />
+                    </g>
+                  
+                    <g id="minute_hand">
+                      <line class="hand" x1="0" y1="0" x2="0" y2="-80" />
+                      <line class="hand hand--thick" x1="0" y1="-12" x2="0" y2="-80" />
+                    </g>
+                  
+                    <g id="second_hand">
+                      <line class="hand hand--second" x1="0" y1="12" x2="0" y2="-80" />
+                    </g>
+                  
+                    <circle class="center" r="3" />
+                  </svg>
+                  
+            </div>
+            <div id="time-date-container" class="head-bar-section">
+                <div id="date-left">
+                    <div id="day-cont" class="date-left-members">
+                        <p id="day-weekly">Mon</p>
+                    </div>
+                    <div id="date-cont" class="date-left-members">
+                        <p id="date-monthly">13</p>
+                    </div>
+                    <div id="month-cont" class="date-left-members">
+                        <p id="month-yearly">5</p>
+                    </div>
+                    <div id="year-cont" class="date-left-members">
+                        <p id="year"></p>
+                    </div>
+                </div>
+                <div id="date-right">
+                    <p id="current-hour" class="current-time"></p>
+                    
+                    <p id="current-minutes" class="current-time">09</p>
+                </div>
+            </div>
+        </div>
+        <div id="middle-bar">
+            <div id="middle-bar-top">
+
+                <div id="current-day-highlow">
+                    <div id="curr-day-up">
+                        <div id="curr-day-up-left">
+                            <div id="wind-speed-box">
+                                <img src="icon/air_black_24dp.svg" id="svg-for-wind"><p id="wind-speed">na</p>kmph
+                            </div>
+                            <div id="wind-dir-box">
+                                <img src="icon/explore_black_24dp.svg"><p id="wind-direction">na</p>
+                            </div>
+                            <div id="uv-index-box">
+                                <img src="icon/light_mode_black_24dp.svg"><p id="uv-index">na</p>UV-index
+                            </div>
+                            <div id="humidity-box">
+                                <img src="icon/water_drop_black_24dp.svg"><p id="current-humidity">na</p>Hd.  
+                            </div>
+
+                        </div>
+                        <div id="curr-day-up-middle">
+                            <p id="current-weather-tag">Current Weather(°C)</p>
+                            <div id="curr-day-temp-box">
+                                <div id="curr-day-temp-circle">
+                                   <p id="current-temp-main" >na</p><img id="curret-weather-img" src="">
+                                </div>
+                            </div>
+                            <div id="curr-day-temp-status-box">
+                                Turn on Data & Location and refresh
+                            </div>
+                        </div>
+                        <div id="curr-day-up-right">
+                            <div id="curr-day-up-right-high">
+                                ▲<p id="high-temp">na°</p>
+                            </div>
+                            <div id="curr-day-up-right-low">
+                                ▼<p id="low-temp">na°</p>
+                            </div>
+                            <div id="cloud-box">
+                                <img src="icon/filter_drama_black_24dp.svg"><p id="current-cloud">na</p>  
+                            </div>
+                            <div id="feelslike-box">
+                                Feelslike<p id="feelslike">na</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="curr-day-down">
+                        <div class="curr-day-down-hours">
+                            <u>6</u> <p id="am-6" class="hours-6-12">na</p> <p class="am-or-pm">am</p>
+                        </div>
+                        <div class="curr-day-down-hours">
+                            <u>9</u> <p id="am-9" class="hours-6-12">na</p> <p class="am-or-pm">am</p>
+                        </div>
+                        <div class="curr-day-down-hours">
+                            <u>12</u> <p id="pm-12" class="hours-6-12">na</p> <p class="am-or-pm">pm</p>
+                        </div>
+                        <div class="curr-day-down-hours">
+                            <u>3</u> <p id="pm-3" class="hours-6-12">na</p> <p class="am-or-pm">pm</p>
+                        </div>
+                        <div class="curr-day-down-hours">
+                            <u>6</u> <p id="pm-6" class="hours-6-12">na</p> <p class="am-or-pm">pm</p>
+                        </div>
+                        <div class="curr-day-down-hours">
+                            <u>9</u> <p id="pm-9" class="hours-6-12">na</p> <p class="am-or-pm">pm</p>
+                        </div>
+                        <div class="curr-day-down-hours">
+                            <u>12</u> <p id="am-12" class="hours-6-12">na</p> <p class="am-or-pm">am</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="days-forcast-box">
+            <div id="day-1" class="days-forcast-days">
+                <div id="day-1-name" class="forcast-days-names">
+                    Na
+                </div>  
+                <div id="day-1-icon" class="forcast-days-icons">
+                    <img src="" id="day-1-img">
+                </div>
+                <div id="day-1-temp" class="forcast-days-temp">
+                    <p class="forcast-tempup-icon">▲</p> 
+                     <p id="day-1-high" class="forcast-up-down-temp">na</p>
+                     <b> |</b>
+                     <p id="day-1-down" class="forcast-up-down-temp">na</p>
+                    <p class="forcast-tempdown-icon">▼</p>
+                </div>
+            </div>
+            <div id="day-2" class="days-forcast-days">
+                <div id="day-2-name" class="forcast-days-names">
+                    Na
+                </div>  
+                <div id="day-2-icon" class="forcast-days-icons">
+                    <img src="248.png" id="day-2-img">
+                </div>
+                <div id="day-2-temp" class="forcast-days-temp">
+                    <p class="forcast-tempup-icon">▲</p> 
+                     <p id="day-2-high" class="forcast-up-down-temp">na</p>
+                     <b> |</b>
+                     <p id="day-2-down" class="forcast-up-down-temp">na</p>
+                    <p class="forcast-tempdown-icon">▼</p>
+                </div>
+            </div>
+
+        </div>
+        <div id="user-location-bar">
+            <div id="lat-box">
+                Lat-na
+            </div>
+            <div id="long-box">
+                Long-na
+            </div>
+            <div id="city-box">
+                Current-location(na)
+            </div>
+
+        </div>
+        <div id="todo-bar">
+            <audio id="beep" preload="auto" src="https://commondatastorage.googleapis.com/codeskulptor-assets/week7-brrring.m4a"></audio>
+            <p id="todo-heading" >Add Todo</p>
+            <div id="todo-bar-input-box">
+                <input type="text" id="todoinput" placeholder="Enter Task" required>
+                <button type="submit" id="todo-submit-button">+</button>
+            </div>
+            <div id="result-box">
+                <p id="result-box-heading">
+                   Your Todo-List
+                </p>
+                
+            <div id="results"></div>
+            </div>
+        </div>
+        <div class="card-group">
+            <div class="card">
+                <button class="menu-button active" id="home-button" onclick="location.href='index.html' ">
+                    <b><img class="icon" src="icon/home_black_24dp.svg">
+
+                    </img>Home</b>
+
+                </button>
+                <button class="menu-button " id="tools-button" onclick="location.href='tools.html'  ">
+                    <img class="icon" src="icon/grid_view_black_24dp.svg">
+                    </img>
+                    Community
+                </button>
+                <button class="menu-button" id="profile-button" onclick="location.href='profile.html'  ">
+                    <img class="icon" src="icon/account_circle_black_24dp.svg">
+                    </img>
+                    Account
+                </button>
+            </div>
+        </div>
+        <script src="js/JQUERY.js"></script>
+        <script src="js/index1.js"></script>
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

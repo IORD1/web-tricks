@@ -1,0 +1,709 @@
+:root {
+    --primary-light: #8abdff;
+    --primary: #6d5dfc;
+    --primary-dark: #5b0eeb;
+    --white: #FFFFFF;
+    --greyLight-1: #E4EBF5;
+    --greyLight-2: #c8d0e7;
+    --greyLight-3: #bec8e4;
+    --greyDark: #9baacf;
+  }
+
+  html {
+    overflow: scroll;
+    overflow-x: hidden;
+    background: var(--greyLight-1);
+  }
+  ::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+  }
+  /* Optional: show position indicator in red */
+  ::-webkit-scrollbar-thumb {
+    background: darkgrey;
+  }
+
+  li{
+      color: rgb(44, 43, 43);
+  }
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color: --greyLight-1;
+    height:100vh;
+    margin:0px;
+    padding:0px;
+    /* Padding to avoid the "unsafe" areas behind notches in the screen */
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+    /* text-transform:uppercase; */
+    width:100%;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color var(--duration);
+    
+
+}
+
+#head-bar{
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.head-bar-section{
+    width: 50%;
+    height: auto;
+    margin: 10px 10px 10px 10px;
+    border-radius: 19px;
+    font-family: "Poppins", sans-serif;
+
+    
+
+}
+
+/* ------------------------battery */
+#battery-container{
+
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    width: 30%;
+    align-content: center;
+    border-radius: 19px;
+ 
+
+}
+svg {
+    display: none;
+    margin: 5px auto auto auto;
+
+  }
+.hour_marker {
+    fill: transparent;
+    stroke: slategrey;
+    stroke-width: 7;
+    stroke-dasharray: 0.2, 4.8;
+    stroke-dashoffset: 0.1;
+  }
+  
+  .minute_marker {
+    fill: transparent;
+    stroke: #0f0e0e;
+    stroke-width: 7;
+    stroke-dasharray: 0.2, 0.8;
+    stroke-dashoffset: 0.1;
+  }
+  #hour_hand{
+      stroke: #6d5dfc;
+  }
+  .hand {
+    stroke: #9baacf;
+    stroke-width: 2;
+    stroke-linecap: round;
+  }
+  
+  .hand--thick {
+    stroke-width: 7;
+  }
+  
+  .hand--second {
+    stroke: #5b0eeb;
+  }
+  
+  .center {
+    fill: blue;
+    stroke-width: 2;
+    stroke: white;
+  }
+  
+  .text {
+    fill: #5b0eeb;
+    font-family: "Roboto", sans-serif;
+    text-anchor: middle;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+
+/* -----------------------battery over */
+
+
+/* ------date-time----------------------- */
+#time-date-container{
+
+    width: 65%;
+    display: flex;
+    display: -webkit-flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+
+
+
+}
+
+#date-left{
+    width: 60%;
+    height: 90%;
+    border-radius: 19px;
+    margin: 5px auto auto 5px;
+
+}
+
+#date-right{    
+    width: 35%;
+    height: 90%;
+    margin: 5px 5px auto 10px ;
+    border-radius: 19px;
+    overflow: hidden;
+}
+
+.current-time{
+    font-size: 45px;
+    margin: 0px auto auto 0px;
+    overflow:scroll;
+    color: rgb(43, 43, 43);
+    
+
+}
+#current-hour{
+    overflow: hidden;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    text-shadow: 2px 2px 5px #9baacf    ;
+}
+#current-minutes{
+    overflow:scroll;
+    text-shadow: 2px 2px 5px #9baacf;
+}
+
+.date-left-members{
+    height: 20%;
+    width: 100%;
+    border-radius: 19px;
+    margin: 5px auto 5px 5px;
+    overflow: hidden;
+    font-size: 16px;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    color: rgb(43, 43, 43);
+
+}
+#date-monthly{
+    margin: 1px auto auto 5px;
+}
+#day-weekly{
+    margin: 1px auto auto 5px;
+}
+#month-yearly{
+    margin: 1px auto auto 5px;
+}
+#year{
+    margin: 1px auto auto 5px;
+}
+
+/* ------------------------date conatiner */
+/* -------weather section------------------ */
+#middle-bar{
+    width: 100%;
+    height: auto;
+
+}
+
+#middle-bar-top{
+    width: 100%;
+    display: flex;
+    height: auto;
+
+    
+}
+
+
+/* >>>>>current-day-forcast */
+#current-day-highlow{
+    width: 100%;
+    height:auto;
+    border-radius: 4px;
+    padding-right: 0px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    
+}
+
+#curr-day-up{
+    width: 100%;
+    height: auto;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding-right: 0px;
+
+}
+
+#curr-day-up-left{
+    width: auto;
+    height: 100%;
+    margin:auto 0px auto 0px;
+    max-width: 30%;
+    overflow: hidden;
+    border-top-right-radius: 19px;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    border-bottom-right-radius: 19px;
+}
+#curr-day-up-middle{
+    width: auto;
+    height: 100%;
+    text-align: center;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding-left: 0px;
+
+}
+#current-weather-tag{
+    height: auto;
+    width: 100%;
+    font-size: 15px;
+    line-height: 15px;
+    color: rgb(39, 36, 36);
+    margin: auto auto 20px auto;
+    text-align: center;
+}
+#curr-day-up-right{
+    width: auto;
+    height: 100%;
+    margin:auto 0px auto 0px;
+    overflow: hidden;
+    max-width: 30%;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    border-top-left-radius: 19px;
+    border-bottom-left-radius: 19px;
+}
+#curr-day-temp-box{
+    width: 95%;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    font-size: 43px;
+    border-radius: 50px;
+    text-align: center;
+    padding-top: 20px;
+    margin: auto auto   20px auto;
+
+    
+}
+#current-temp-main{
+    line-height: 60px;
+    font-size: 60px;
+    margin: auto auto auto auto;
+    text-shadow: 2px 2px 5px #9baacf    ;
+
+}
+#curret-weather-img{
+    line-height: 30px;
+}
+
+#curr-day-temp-status-box{
+    width:90%;
+    height: 40%;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    border: none;
+    border-radius: 19px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 25px;
+    margin: auto auto 20px auto;
+}
+#curr-day-up-right-high{
+    width: 100%;
+    height: 25%;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    color: rgb(235, 139, 139);
+    font-size: 10px;
+    display: flex;
+
+    padding-left: 5px;
+}
+#curr-day-up-right-high p{
+    color: black;
+    font-size: 30px;
+    line-height: 0px;
+}
+
+
+#curr-day-up-right-low{
+    width: 100%;
+    height: 25%;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    padding-left: 5px;
+    color: rgb(139, 139, 230);
+    font-size: 10px;
+    display: flex;
+}
+#curr-day-up-right-low p{
+    color: black;
+    font-size: 30px;
+    line-height: 0px;
+}
+#feelslike-box{
+    width: 100%;
+    height: 25%;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+
+    text-align: center;
+    font-size: 15px;
+    line-height: 10px;
+    padding-top: 5px;
+}
+#feelslike{
+    font-size: 30px;
+    margin: 10px auto auto auto;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    line-height: 30px;
+}
+#cloud-box{
+    width: 100%;
+    height: 25%;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    display: flex;
+    font-size: 9px;
+    overflow: hidden;
+}
+#cloud-box p{
+    font-size: 30px;
+    line-height: 0px;
+
+    
+}
+#wind-speed-box{
+    height: 30%;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+
+    display: flex;
+    font-size: 9px;
+    padding-left: 5px;
+    overflow:hidden;
+    
+
+}
+#wind-speed-box p{
+    font-size: 30px;
+    line-height: 0px;
+}
+#wind-dir-box{
+
+    height: 30%;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+
+    display: flex;
+    font-size: 30px;
+    padding-left: 5px;
+    overflow: hidden;
+    
+}
+#wind-direction{
+    line-height: 0px;
+}
+#uv-index-box{
+
+    height: 30%;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+
+    display: flex;
+    font-size: 9px;
+    padding-left: 5px;
+    overflow: hidden;
+}
+#uv-index-box p{
+    font-size: 30px;
+    line-height: 0px;
+
+}
+#humidity-box{
+    height: 25%;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    overflow: hidden;
+    display: flex;
+    font-size: 9px;
+    padding-left: 5px;
+
+}
+#humidity-box p{
+    font-size: 30px;
+    line-height: 0px;
+
+}
+/* --------curr-day-down-hours */
+#curr-day-down{
+    width: 100%;
+    height: auto;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+.curr-day-down-hours{
+    width: 14%;
+    height: 100%;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    text-align: center;
+    line-height: 16px;
+    font-size: 14px;
+    
+}
+
+
+.hours-6-12{
+    font-size: 20px;
+    line-height: 0px;
+}
+.am-or-pm{
+    font-size: 10px;
+}
+
+/* ------user-location--------------------- */
+#user-location-bar{
+    height: auto;
+    width: 100%;    
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 18px;
+    margin: 20px 0px 20px 0px;
+}
+
+#lat-box{
+    height: 100%;
+    width: auto;
+    margin: 10px 5px auto 5px;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    border-radius: 5px;
+    text-align: center;
+
+}
+#long-box{
+    height: 100%;
+    width: auto;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    margin: 10px 5px auto 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+#city-box{
+    height: 100%;
+    width: auto;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    border-radius: 5px;
+    margin: 10px 5px auto 5px;
+    text-align: center;
+}
+
+/* -------------------------------end o location bar */
+
+/* >>>>>>>>forcast<<<<<< */
+#days-forcast-box{
+    width: 100%;
+    height: auto ;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin: 20px auto 0px auto ;
+}
+#day-1{
+    margin: auto auto auto 10px;
+}
+#day-2{
+    margin: auto 10px auto auto;
+}
+.days-forcast-days{
+    height: 100%;
+    width: 45%;
+    text-align: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    border-radius: 19px;
+}
+.forcast-days-names{
+
+    height: 25%;
+    width: 100%;
+    
+}
+.forcast-tempup-icon{
+    color: rgb(235, 139, 139);
+    font-size: 10px;
+    line-height: 0px;
+    margin: auto 5px auto 28%;
+}
+.forcast-tempdown-icon{
+    color: rgb(139, 139, 230);
+    font-size: 10px;
+    line-height: 0px;
+}
+.forcast-days-icons{
+    height: 40%;
+    width: 100%;
+}
+.forcast-days-icons img{
+    height: 100%;
+    width: auto;
+}
+.forcast-days-temp{
+    height: 35%;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-content: center;
+    
+}
+.forcast-up-down-temp{
+    font: 22px;
+    line-height: 0px;
+}
+/* ---------------------------end o weather */
+
+
+/* ------todo-bar------------------------ */
+#todo-bar{
+    width: 100%;
+    height: auto;
+
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
+}
+#todo-heading{
+    font-size: 25px;
+    line-height: 25px;
+    margin: 5px auto 5px auto;
+    font-family: "Poppins", sans-serif;
+    color: rgb(27, 27, 27);
+}
+#todo-bar-input-box{
+
+    height: 50px;
+    width: 100%;
+    display: flex;
+    
+}
+
+#todoinput{
+    width: 70%;
+    height: 65%;
+    margin: 10px auto 10px 10px;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+    background: none;
+    font-family: inherit;
+    color: var(--greyDark);
+    font-family: "Poppins", sans-serif;
+    padding-left: 5px;
+    transition: 0.3s ease;
+}
+#todoinput:focus {
+    outline: none;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+  }
+
+#todo-submit-button{
+    width: 19%;
+    height: 65%;
+    margin: 10px 10px auto 10px;
+    border-radius: 8px;
+    color:  rgb(53, 53, 53);
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    border: none;
+    transition: 0.3s ease;
+    font-size: 20px;
+}
+#todo-submit-button:active{
+  box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+
+}
+#result-box{
+    padding-bottom: 20%;
+}
+
+
+#result-box-heading{
+    font-size: 20px;
+    line-height: 20px;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2);
+
+}
+
+#result-box a{
+    margin: auto auto 5px 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+
+    border-radius: 19px;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+
+
+/* ---------------------------------end p todo bar------ */
+  /* 
+  expermient splash screen*/
+  
+  .splash{
+    position: fixed;
+    top: 0;
+    font-family: "Poppins", sans-serif;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:black;
+    z-index: 200;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .splash.display-none{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:transparent;
+    z-index: -10;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+  }
+  
+  @keyframes inc{
+    0%{
+      width: 0px;
+      height: 0px;
+    }
+  
+    75%{
+      width: 0px;
+      height: 0px;
+    }
+  
+    100% {
+      opacity: 1;
+      width: 300%;
+      height: 300%;
+      z-index: -10;
+      color: transparent;
+      background-color: transparent;
+    }
+  }
+  
+  .circle{
+    z-index: 201;
+    border-radius: 1000px;
+    background-color: transparent;
+    animation: inc 2s forwards;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+  }
